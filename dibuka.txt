@@ -1,0 +1,163 @@
+C:\SAIF\saipul\app_perpus>python
+Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import random
+>>> import math
+>>> digits = [i for i in range(0,10)]
+>>> random_str = ""
+>>> for i in range(6)
+  File "<stdin>", line 1
+    for i in range(6)
+                     ^
+SyntaxError: invalid syntax
+>>> for i in range(6):
+... index = math.floor(random.random())
+  File "<stdin>", line 2
+    index = math.floor(random.random())
+    ^
+IndentationError: expected an indented block
+>>> for i in range(6):
+...     index = math.floor(random.random())
+...     random_str += str(digits[index])
+...     print(random_str)
+...
+0
+00
+000
+0000
+00000
+000000
+>>> for i in range(6):
+...     index = math.floor(random.random())
+...     random_str += str(digits[index])
+...
+>>> print(random_str)
+000000000000
+>>> print(random_str)
+000000000000
+>>> for i in range(6):
+...     index = math.floor(random.random()*10)
+...     random_str += str(digits[index])
+...     print(random_str)
+...
+0000000000000
+00000000000006
+000000000000062
+0000000000000627
+00000000000006274
+000000000000062742
+>>>
+KeyboardInterrupt
+>>> exit()
+
+C:\SAIF\saipul\app_perpus>python
+Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import random
+>>> import math
+>>>
+>>> def random():
+...     digits = [i for i in range(0, 10)]
+...     random_str = ""
+...     for i in range(6):
+...             index = math.floor(random.random() * 10)
+...             random_str += str(digits[index])
+...     print(random_str)
+...
+>>> random()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 5, in random
+AttributeError: 'function' object has no attribute 'random'
+>>> random()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 5, in random
+AttributeError: 'function' object has no attribute 'random'
+>>> exit()
+
+C:\SAIF\saipul\app_perpus>python
+Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+KeyboardInterrupt
+>>> exit()
+
+C:\SAIF\saipul\app_perpus>python
+Python 3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from datetime import datetime, timedelta
+>>> now = datetime.now()
+>>> minggu = 7
+>>> minggudepan = now + timedelta(days=minggu)
+>>> print(now)
+2022-06-13 16:09:52.598002
+>>> print(minggudepan)
+2022-06-20 16:09:52.598002
+>>> nowdate = datetime.date()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unbound method datetime.date() needs an argument
+>>> minggudepantgl = minggudepan.strftime("%d-%m-%Y")
+>>> print(minggudepantgl)
+20-06-2022
+>>> print(now)
+2022-06-13 16:09:52.598002
+>>> nowdate = datetime.date().now()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unbound method datetime.date() needs an argument
+>>> nowdate = datetime.date()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unbound method datetime.date() needs an argument
+>>> nowdate = datetime.date(now())
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'datetime.datetime' object is not callable
+>>> from datetime import date, time
+>>> nowdate = date.now()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'datetime.date' has no attribute 'now'
+>>> nowdate = date.today()
+>>> print(nowdate)
+2022-06-13
+>>> nowtime = time.time()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'datetime.time' has no attribute 'time'
+>>> nowtime = time.now()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: type object 'datetime.time' has no attribute 'now'
+>>> nowtime = datetime.now().time()
+>>> nowdate = datetime.now().date()
+>>> print(now)
+2022-06-13 16:09:52.598002
+>>> print(now,nowdate,nowtime)
+2022-06-13 16:09:52.598002 2022-06-13 16:19:49.269729
+>>> print(now)
+2022-06-13 16:09:52.598002
+>>> print(nowdate)
+2022-06-13
+>>> print(nowtime)
+16:19:49.269729
+>>> def printwaktu():
+...     now = datetime.now()
+...     datenow = datetime.now().date()
+...     timenow = datetime.now().time()
+...     print(now, "|||", datenow, "|||", timenow)
+...     return
+...
+>>> printwaktu()
+2022-06-13 16:23:00.747175 ||| 2022-06-13 ||| 16:23:00.747175
+>>> printwaktu()
+2022-06-13 16:23:09.027134 ||| 2022-06-13 ||| 16:23:09.027134
+>>> printwaktu()
+2022-06-13 16:23:11.850411 ||| 2022-06-13 ||| 16:23:11.850411
+>>> printwaktu()
+2022-06-13 16:27:31.794504 ||| 2022-06-13 ||| 16:27:31.794504
+>>> printwaktu()
+2022-06-13 18:30:08.722532 ||| 2022-06-13 ||| 18:30:08.722532
+>>>
