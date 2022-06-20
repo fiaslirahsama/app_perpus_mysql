@@ -21,6 +21,7 @@ class buku(db.Model):
     updated_by = db.Column(db.String(30), nullable=True)
     flag = db.Column(db.String(10), nullable=False, default='on')
      
+    # PARAMETER INPUT
     def __init__(self, kodebuku, judul, genre, lokasi, status, created_by):
         self.kodebuku = kodebuku
         self.judul = judul
